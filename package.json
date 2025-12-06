@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "pnpm --filter @zhanhu-components/play dev",
     "docs:dev": "pnpm --filter @zhanhu-components/docs dev",
-    "docs:build": "pnpm --filter @zhanhu-components/docs build"
+    "docs:build": "pnpm --filter @zhanhu-components/docs build",
+    "test": "echo \"zhanhu\""
   },
   "keywords": [],
   "author": "",
