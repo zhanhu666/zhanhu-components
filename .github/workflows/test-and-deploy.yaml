@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
 
       - name: Install pnpm 
         run: npm install -g pnpm
@@ -33,10 +33,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -63,13 +63,8 @@ jobs:
         with:
           name: docs
 
-      - name: List published files
-        run: |
-          echo "Listing downloaded artifact path..."
-          ls -la packages/docs/.vitepress/dist || true
-
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./packages/docs/.vitepress/dist
+          publish_dir: .
